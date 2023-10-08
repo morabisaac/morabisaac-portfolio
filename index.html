@@ -1,11 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="calculator.html">My project ajsndkjasdkjn SNDFJNSDF!</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isaac Mora</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/23f1e8e49a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Isaac Mora</span><br />From Costa Rica</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------about--------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+              voluptates corrupti quod laboriosam similique! Saepe ducimus
+              officiis numquam accusamus, iure delectus itaque unde dolor, modi
+              natus quae assumenda odio est!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+                <li>
+                  <span>Web Development</span><br />Personalized Web Development
+                </li>
+                <li>
+                  <span>Object Oriented Programming</span><br />Designing
+                  Corporative Software
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Warehouse Coordinator at Maersk</span>
+                </li>
+                <li>
+                  Directed and guided the warehouse workforce, prioritizing
+                  delivery schedules, and overseeing the daily operations.
+                </li>
+                <li>
+                  Demonstrated exceptional inventory control skills by
+                  maintaining an accurate and well-organized inventory system,
+                  ensuring an adequate supply of items.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Software Engineering</span><br />Universidad Fidelitas
+                  <span>2023-2025</span>
+                </li>
+                <li>
+                  <span>High School</span><br />Colegio de San Luis Gonzaga
+                  <span>2020</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------SERVICES----------------- -->
+    <div id="SERVICES">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+              amet natus quidem inventore possimus non alias, quia optio soluta
+              dicta praesentium omnis expedita excepturi nostrum commodi cum
+              voluptate ipsum. Fuga.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+              amet natus quidem inventore possimus non alias, quia optio soluta
+              dicta praesentium omnis expedita excepturi nostrum commodi cum
+              voluptate ipsum. Fuga.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-box-open"></i>
+            <h2>Object Oriented Programming</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+              amet natus quidem inventore possimus non alias, quia optio soluta
+              dicta praesentium omnis expedita excepturi nostrum commodi cum
+              voluptate ipsum. Fuga.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
 </html>
